@@ -1,0 +1,15 @@
+*** Settings ***
+Documentation    Initial data
+Library        Selenium2Library
+Library        XvfbRobot
+Resource       workshop_res.txt
+
+*** Variables ***
+${MESSAGE}       Hello, world!
+${Pronto URL}    http://www.prontotools.io/
+
+*** Keywords ***
+Open Prontomarketing website
+    Start Virtual Display
+    Open Browser    http://www.prontotools.io/   Firefox
+    Set Window Size    1920    1080
